@@ -9,9 +9,6 @@ const dirToIgnore = /tools/
 const nextConfig = {
 	reactStrictMode: true,
 	output: "standalone",
-	publicRuntimeConfig: {
-		version
-	},
 	images: {
 		unoptimized: true,
 		remotePatterns: [
@@ -40,7 +37,8 @@ const nextConfig = {
 		return config
 	},
 	env: {
-		BUILD_MODE: process.env.BUILD_MODE
+		BUILD_MODE: process.env.BUILD_MODE,
+		VERSION: version
 	}
 }
 
